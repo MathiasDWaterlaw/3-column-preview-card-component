@@ -177,7 +177,7 @@ button:hover{
     main{
         display: grid;
         grid-template-columns: auto auto auto;
-        width: 70%;
+        max-width: 865px;
         min-width: 700px;
         margin: 0;
     }
