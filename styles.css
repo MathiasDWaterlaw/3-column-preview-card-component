@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root{
+    --sedans-orange: hsl(31, 77%, 52%);
+    --suvs-blue: hsl(184, 100%, 22%);
+    --luxury-green: hsl(179, 100%, 13%);
+    --paragraph-white: hsla(0, 0%, 100%, 0.75);
+    --other-white: hsl(0, 0%, 95%);
+}
+
+/* __MODERN-CSS-RESET__ */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  font-size: 10px;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/*_____STARTS-THE-REAL-CODE_____*/
+
+body{
+    background-color: var(--other-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Lexend Deca, sans-serif;
+    font-size: 15px;
+
+}
+
+.attribution{
+    text-align: center;
+}
+
+main{
+    margin: 25% 6%;
+    border-radius: 10px;
+
+}
+
+.card{
+    padding: 4rem;
+    color: var(--paragraph-white);
+}
+
+.content{
+    margin: 4rem 0;
+}
+
+.title{
+    font-family: Big Shoulders Display, Lexend Deca, sans-serif;
+    text-transform: uppercase;
+    color: var(--other-white);
+    font-size: 4rem;
+    margin: 0 0 4rem 0;
+}
+
+button{
+    padding: 1rem 3rem;
+    border: 2px solid var(--other-white);
+    border-radius: 50px;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+/* __SEDANS-COLORS__ */
+#sedans{
+    background-color: var(--sedans-orange);
+    border-radius: 10px 10px 0 0;
+}
+#sedans .btn{
+    color: var(--sedans-orange);
+}
+#sedans .btn:hover{
+    background-color: var(--sedans-orange);
+    color: var(--other-white);
+}
+
+/* __SUVS-COLORS__ */
+#suvs{
+    background-color: var(--suvs-blue);
+}
+#suvs .btn{
+    color: var(--suvs-blue);
+}
+#suvs .btn:hover{
+    background-color: var(--suvs-blue);
+    color: var(--other-white);
+}
+
+/* __LUXURY-COLOR__ */
+#luxury{
+    background-color: var(--luxury-green);
+    border-radius: 0 0 10px 10px;
+}
+#luxury .btn{
+    color: var(--luxury-green);
+}
+#luxury .btn:hover{
+    background-color: var(--luxury-green);
+    color: var(--other-white);
+}
+
+@media (min-width: 720px) {
+
+    main{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        width: 70%;
+        min-width: 700px;
+        margin: 0;
+    }
+
+    #sedans{
+        border-radius: 10px 0 0 10px;
+    }
+
+    #luxury{
+        border-radius: 0 10px 10px 0;
+    }
+
+    button{
+        margin-top: 4rem;
+    }
+
+    .attribution{
+        margin-top: 2rem;
+    }
+}
